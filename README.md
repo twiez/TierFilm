@@ -3,7 +3,7 @@
 <p align="center">
   <kbd>
   <a href="https://tierfilm.netlify.app/">
-    <img src="https://raw.githubusercontent.com/twiez/tierfilm/main/public/vite.svg" alt="Logo" width="250" height="250">
+    <img src="https://github.com/user-attachments/assets/2bc6e87b-9bcd-49d6-8a73-10363337f42f" alt="Logo" width="250" height="250">
   </kbd>
   </a>
 
@@ -30,7 +30,7 @@
 
 This application allows you to create customizable tier lists for your favorite movies and TV shows. You can search for media, drag and drop them into different tiers, and instantly share your list with friends using a unique, URL-encoded link without needing a database. By sharing your link, you can also compare your lists with others to see your compatibility score.
 
-![Screenshot](https://via.placeholder.com/800x450?text=TierFilm+Screenshot)
+![Screenshot](https://github.com/user-attachments/assets/3f055591-0ecc-42ea-8f63-9cf697515d8f)
 
 ### Features
 
@@ -77,8 +77,8 @@ This application allows you to create customizable tier lists for your favorite 
 
 ## Support
 
-If you found this project helpful, please give it a ⭐️! It helps the project grow and encourages further development.
+If you found this project helpful, please give it a ⭐️!
 
 ---
 
-Built with ❤️ by [twiez](https://github.com/twiez)
+Built with ❤️ by [twiez](https://discord.com/users/886190759479480330)

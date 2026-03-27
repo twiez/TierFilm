@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-mono bg-bg-base text-text-primary antialiased;
+    background-color: #08080f;
+    background-image: radial-gradient(
+      ellipse 80% 50% at 50% -10%,
+      rgba(124, 58, 237, 0.12) 0%,
+      transparent 70%
+    );
+    min-height: 100vh;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+  }
+
+  ::selection {
+    background-color: rgba(124, 58, 237, 0.35);
+    color: #f0f0f5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #08080f;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(124, 58, 237, 0.4);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(124, 58, 237, 0.7);
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(22, 22, 37, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-strong {
+    background: rgba(28, 28, 46, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm
+           bg-accent text-white border border-accent/30
+           hover:bg-accent-light hover:shadow-glow-sm
+           transition-all duration-200 ease-out
+           active:scale-95 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-semibold text-sm
+           bg-transparent text-text-primary border border-border
+           hover:border-accent/50 hover:text-accent-light hover:bg-accent/5
+           transition-all duration-200 ease-out
+           active:scale-95 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm
+           text-text-secondary hover:text-text-primary hover:bg-white/5
+           transition-all duration-200 ease-out cursor-pointer;
+  }
+
+  .card {
+    @apply bg-bg-card border border-border rounded-xl shadow-card;
+  }
+
+  .card-hover {
+    @apply hover:border-border-strong hover:shadow-card-hover hover:-translate-y-0.5
+           transition-all duration-200 ease-out;
+  }
+
+  .tier-label {
+    @apply flex items-center justify-center w-14 shrink-0 font-extrabold text-xl
+           rounded-lg h-full;
+  }
+
+  .input {
+    @apply w-full bg-bg-elevated border border-border rounded-lg px-4 py-2.5
+           text-text-primary placeholder-text-muted text-sm font-mono
+           focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/30
+           transition-all duration-200;
+  }
+
+  .section-label {
+    @apply text-xs font-semibold tracking-widest uppercase text-accent-light;
+  }
+
+  .page-title {
+    @apply text-3xl md:text-4xl font-extrabold text-text-primary tracking-tight;
+  }
+
+  .divider {
+    @apply w-full h-px bg-border;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #a855f7 0%, #7c3aed 50%, #6d28d9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .poster-aspect {
+    aspect-ratio: 2 / 3;
+  }
+}
+
+/* Premium Export Image Styling */
+.export-mode {
+  background-color: #08080f !important;
+  color: #f0f0f5 !important;
+  padding: 40px !important;
+  border-radius: 20px !important;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05) inset !important;
+}
+
+.export-mode .empty-tier-text {
+  display: none !important;
+}
+
+.export-mode .pool-section {
+  display: none !important;
+}
